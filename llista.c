@@ -90,3 +90,8 @@ int LISTABIORD_consulta (ListaBiOrd l) {
 
     return e;
 }
+
+int LISTABIORD_buida (ListaBiOrd l) {
+    return l.pri->sig == l.ult;
+}
+
