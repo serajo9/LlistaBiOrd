@@ -77,3 +77,16 @@ ListaBiOrd LISTABIORD_elimina (ListaBiOrd l) {
     return l;
 }
 
+int LISTABIORD_consulta (ListaBiOrd l) {
+
+    int e = -1;
+
+    if (l.pdi == l.pri || l.pdi == l.ult) {
+        printf("Error, s'esta apuntant a un fantasma.\n ");
+    }
+    else {
+        e = l.pdi->e;
+    }
+
+    return e;
+}
