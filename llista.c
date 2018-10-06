@@ -102,3 +102,9 @@ int LISTABIORD_fi (ListaBiOrd l) {
 int LISTABIORD_inici (ListaBiOrd l) {
     return l.pdi == l.pri;
 }
+
+ListaBiOrd LISTABIORD_vesInici (ListaBiOrd l) {
+    l.pdi = l.pri->sig;
+
+    return l;
+}
