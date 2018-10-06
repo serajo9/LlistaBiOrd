@@ -95,6 +95,6 @@ int LISTABIORD_buida (ListaBiOrd l) {
     return l.pri->sig == l.ult;
 }
 
-int LISTABOORD_fi (ListaBiOrd l) {
+int LISTABIORD_fi (ListaBiOrd l) {
     return l.pdi == l.ult;
 }
