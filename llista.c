@@ -108,3 +108,9 @@ ListaBiOrd LISTABIORD_vesInici (ListaBiOrd l) {
 
     return l;
 }
+
+ListaBiOrd LISTABIORD_vesFi (ListaBiOrd l) {
+    l.pdi = l.ult->ant;
+
+    return l;
+}
