@@ -118,10 +118,21 @@ ListaBiOrd LISTABIORD_vesFi (ListaBiOrd l) {
 ListaBiOrd LISTABIORD_avanca (ListaBiOrd l) {
 
     if (l.pdi->sig == NULL) {
-        printf("Error, estic al ultim fantasma.\n");
+        printf("Error, estic en el ultim fantasma.\n");
     }
     else {
         l.pdi = l.pdi->sig;
+    }
+
+    return l;
+}
+
+ListaBiOrd LISTABIORD_retrocedeix (ListaBiOrd l) {
+    if (l.pdi->ant == NULL) {
+        printf("Error, estic en el primer fantsma.\n");
+    }
+    else {
+        l.pdi = l.pdi->ant;
     }
 
     return l;
