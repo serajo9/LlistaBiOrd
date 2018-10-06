@@ -56,3 +56,24 @@ void LISTABIORD_afegirOrdenat(ListaBiOrd l, int e){
         l->ant = l->ant->sig;
     }
 }
+
+ListaBiOrd LISTABIORD_elimina (ListaBiOrd l) {
+
+    Node *aux;
+
+    if (l.pdi == l.pri || l.pdi == l.ult) {
+        printf("Error, s'esta apuntant a un fantasma.\n");
+    }
+    else {
+        aux = l.pdi;
+
+        l.pdi->ant->sig = l.pdi->sig;
+        l.pdi->sig->ant = l.pdi->ant;
+        l.pdi = l.pdi->sig;
+
+        free(aux);
+    }
+
+    return l;
+}
+
