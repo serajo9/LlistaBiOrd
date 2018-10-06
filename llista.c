@@ -114,3 +114,15 @@ ListaBiOrd LISTABIORD_vesFi (ListaBiOrd l) {
 
     return l;
 }
+
+ListaBiOrd LISTABIORD_avanca (ListaBiOrd l) {
+
+    if (l.pdi->sig == NULL) {
+        printf("Error, estic al ultim fantasma.\n");
+    }
+    else {
+        l.pdi = l.pdi->sig;
+    }
+
+    return l;
+}
