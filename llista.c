@@ -137,3 +137,19 @@ ListaBiOrd LISTABIORD_retrocedeix (ListaBiOrd l) {
 
     return l;
 }
+
+ListaBiOrd LISTABIORD_destrueix (ListaBid l) {
+    Node *aux;
+
+    while (l.pri != NULL) {
+        aux = l.pri;
+        l.pri = l.pri->sig;
+        free(aux);
+    }
+
+    l.pri = NULL;
+    l.ult = NULL;
+    l.pdi = NULL;
+
+    return l;
+}
